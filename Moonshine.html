@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Moonshine Mountains</title>
+        <link rel="stylesheet" type="text/css" href="Stylesheets/style_Moonshine.css">
+    </head>
+    <body>
+        <header>
+            <a href="https://wk1wwwwuxbiprqjzyjwxrg-on.drv.tw/wesite/" class="logo">logo</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+
+        <section>
+            <img src="Images/stars.png" id="stars">
+            <img src="Images/moon.png" id="moon">
+            <img src="Images/mountains_behind.png" id="mountains_behind">
+            <img src="Images/mountains_front.png" id="mountains_front">
+        </section>
+
+        <div class="sec">
+            <h2>Parallax Scrolling Effects</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus earum accusantium illum commodi aut aspernatur nulla ratione ea blanditiis, sed quos iusto molestiae natus rem consequuntur quasi obcaecati ullam voluptates? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad illum doloremque ducimus itaque necessitatibus. Fugiat exercitationem minus quaerat illum consectetur, deleniti, saepe rerum ea itaque iusto distinctio non quis in! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas assumenda dicta, aperiam harum quibusdam exercitationem! Explicabo corrupti illo enim id temporibus ut dolorum possimus itaque. Labore maxime facilis ducimus velit!<br><br>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, dolorem. Hic corrupti sit, rerum saepe iusto vero in illum iste, ipsam omnis repudiandae maiores id. Illo id voluptatibus obcaecati tempore! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi totam soluta ullam quod quos? Laboriosam hic maiores odit dolorem ullam, dolor expedita officia neque facere dolores quidem itaque harum atque?<br><br>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem itaque quis nisi accusantium facere nam unde adipisci! Porro odio a cupiditate ducimus dolore minus, est consequuntur fuga modi sed repellat. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur harum ipsam, in distinctio consequatur asperiores nostrum dolores assumenda? Ullam magni sed dicta accusamus numquam placeat reiciendis doloribus repudiandae totam. Dolores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptatem ad enim delectus, pariatur quos provident labore molestiae repellendus quibusdam, soluta consequuntur incidunt excepturi expedita suscipit earum cupiditate, minima dignissimos. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi dolore eos vitae odit repudiandae ut quasi a recusandae id animi. Numquam obcaecati expedita amet culpa voluptatem esse explicabo minus eius?<br><br>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis ab, quis eligendi qui magnam consequuntur quam provident nesciunt labore rem totam molestiae dolor at numquam in natus ad assumenda delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptatem cumque alias pariatur id, quidem recusandae excepturi odit molestiae atque optio beatae, at placeat illo culpa fugit repellendus. Sunt, corporis.
+            </p>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header')
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                header.styler.top = value * 0.5 + 'px'
+            })
+        </script>
+    </body>
+</html>
